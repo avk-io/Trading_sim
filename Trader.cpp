@@ -14,6 +14,30 @@ void Trader::buyStock(Stock &stock, int qty){
         portfolio[stock.getTicker()] += qty;
         cout<<"Successfully bought "<<qty <<"shares of "<<stock.getTicker()<<endl;
     }
+}
+
+    void Trader::sellStock(Stock &stock,int qty){
+        if(portfolio[stock.getTicker()]<qty){
+            cout<<"Not enough shares to sell "<<qty<<" shares of "<<stock.getTicker()<<endl;
+        }
+        else{
+            double revenue = stock.getPrice()*qty;
+            balance += revenue;
+            portfolio[stock.getTicker()] -= qty;
+            cout<<"Successfully sold "<<qty<<" shares of "<<stock.getTicker()<<endl;
+        }
+
+    }
+
+    void Trader::displayPortfolio() const{
+        cout<<"Portfolio of "<<name<<"/\\/"<<endl;
+        for(auto const it:portfolio){
+            cout<<it.first<<"-->"<<it.second<<endl;
+        }
+        cout<<"Balance: "<<"$"<<balance<<endl;
+
+
+    }
+  
 
     
-}
