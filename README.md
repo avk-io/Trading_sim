@@ -25,8 +25,7 @@ cpp_project/
 ├── mainexe.exe # Compiled executable
 └── .vscode/settings.json # Editor config
 
-yaml
-Copy code
+
 
 ---
 
