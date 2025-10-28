@@ -2,7 +2,7 @@
 #define STOCK_H
 
 #include <string>
-#include <iostream>
+#include <bits/stdc++.h>
 #include <iomanip>
 using namespace std;
 

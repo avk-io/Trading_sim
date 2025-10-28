@@ -15,6 +15,10 @@ void Stock::displayInfo() const{
     cout<<"Stock: "<<name<<"||"<<ticker<<"||"<<"$"<<price<<endl;
     }
 
-string Stock::getTicker() const { return ticker; }
- double Stock::getPrice() const { return price; }
+string Stock::getTicker() const {
+     return ticker; 
+    }
+ double Stock::getPrice() const { 
+    return price; 
+}
 

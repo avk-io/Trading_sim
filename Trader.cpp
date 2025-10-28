@@ -13,18 +13,23 @@ void Trader::buyStock(Stock &stock, int qty){
         balance -= cost;
         portfolio[stock.getTicker()] += qty;
         cout<<"Successfully bought "<<qty <<"shares of "<<stock.getTicker()<<endl;
+
+        history.push_back({"Bought",stock.getTicker(),qty,stock.getPrice()});
     }
 }
 
     void Trader::sellStock(Stock &stock,int qty){
         if(portfolio[stock.getTicker()]<qty){
             cout<<"Not enough shares to sell "<<qty<<" shares of "<<stock.getTicker()<<endl;
+            
         }
         else{
             double revenue = stock.getPrice()*qty;
             balance += revenue;
             portfolio[stock.getTicker()] -= qty;
             cout<<"Successfully sold "<<qty<<" shares of "<<stock.getTicker()<<endl;
+            history.push_back({"SOLD",stock.getTicker(),qty,stock.getPrice()});
+
         }
 
     }
@@ -38,6 +43,16 @@ void Trader::buyStock(Stock &stock, int qty){
 
 
     }
+
+    void Trader::displayTransactionhistory() const{
+            cout<<"----Transaction History-----"<<endl;
+            for(auto &t : history){
+                cout<<t.type<< " | "<<t.stockName<<" | "<<t.quantity<<" | "<<t.price<<endl;
+            }
+    }
+
+   
+  
   
 
     
