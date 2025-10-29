@@ -25,6 +25,10 @@ cpp_project/
 ├── mainexe.exe # Compiled executable
 └── .vscode/settings.json # Editor config
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 88bf7d8abf694b71871777f027f49f51fcedff52
 
 ---
 
