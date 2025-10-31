@@ -1,53 +1,43 @@
-# CLI Trading Simulator
+CLI Trading Simulator
 
 A lightweight command-line trading simulator written in C++.
+It handles basic trading operations — buying, selling, and tracking a portfolio — built as an early step toward more complex trading and financial simulation systems.
 
-This project mimics basic trading operations like **buying, selling, and tracking a portfolio** of stocks — designed as a stepping stone toward more complex financial simulation systems.
+Repository: https://github.com/avk-io/Trading_sim
 
-🔗 **[View Repository](https://github.com/avk-io/Trading_sim)**
+Features
 
----
+Add and manage stocks with price data
 
-## 🧠 Features
-- Add and manage stocks with price data  
-- Buy and sell stocks from a simulated balance  
-- View portfolio with total value and holdings  
-- Extendable architecture (Trader, Stock, Market classes)
+Buy and sell using a simulated balance
 
----
+Track portfolio value and holdings
 
-## ⚙️ Project Structure
+Simple and extendable architecture (Trader, Stock, Market classes)
+
+Project Structure
 cpp_project/
 │
-├── main.cpp # Entry point
-├── Stock.cpp / Stock.h # Stock class (name, ticker, price)
-├── Trader.cpp / Trader.h # Trader class (buy/sell, display portfolio)
-├── mainexe.exe # Compiled executable
+├── main.cpp              # Entry point  
+├── Stock.cpp / Stock.h   # Stock class (name, ticker, price)
+├── Trader.cpp / Trader.h # Trader class (buy/sell, portfolio handling)
+├── mainexe.exe           # Compiled executable  
 └── .vscode/settings.json # Editor config
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 88bf7d8abf694b71871777f027f49f51fcedff52
-
----
-
-## 🚀 How to Run
-```bash
+How to Run
 g++ main.cpp Stock.cpp Trader.cpp -o trading_sim
 ./trading_sim
 
-🔮 Future Plans
+Future Plans
+
 Live price simulation
 
-Persistent data storage (save/load portfolio)
+Portfolio save/load system
 
-Integration with APIs for real-time data
+Integrate with API for real-time date
 
-Command-line menu for easier interaction
+Command-line menu for better interaction
 
-🧑‍💻 Author
-avk-io (Caliz)
+Author: avk-io (Caliz)
 
-“Pretty basic stuff <><> — just sharpening the blade.”
-
+Just the foundation — sharpening the blade before the real build.
