@@ -1,5 +1,6 @@
 #include "Stock.h"
 #include "Trader.h"
+#include "Portfolio.h"
 
 void menu(Trader& trader,vector<Stock>& stocks)
 {
@@ -46,7 +47,7 @@ void menu(Trader& trader,vector<Stock>& stocks)
             trader.sellStock(stocks[stk-1],qty);
             break;
         case 5:
-            trader.displayTransactionhistory();
+            trader.displayTransactionHistory();
             break;
         case 6:
             cout<<"Exiting Program...."<<endl;

@@ -1,36 +1,21 @@
-#ifndef TRADER_H
-#define TRADER_H
-
+#pragma once
+#include <vector>
 #include <string>
-#include <map>
-#include <bits/stdc++.h>
-#include <iomanip>
 #include "Stock.h"
-
-using namespace std;
-
-
-struct Transaction{
-    string type;
-    string stockName;
-    int quantity;
-    double price;
-};
+#include "Transaction.h"
+#include "Portfolio.h"
 
 class Trader {
 private:
-    string name;
+    Portfolio<Stock> portfolio;
+    std::vector<Transaction> history;
+    std::string name;
     double balance;
-    map<string, int> portfolio;
-    vector<Transaction> history;
 
 public:
-    Trader(string n, double b);
-
-    void buyStock(Stock &stock, int qty);
-    void sellStock(Stock &stock, int qty);
+    Trader(const std::string& name, double balance);
+    void buyStock(Stock& stock, int qty);
+    void sellStock(Stock& stock, int qty);
     void displayPortfolio() const;
-    void displayTransactionhistory() const;
+    void displayTransactionHistory() const;
 };
-
-#endif
